@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE muclient>
-<!-- Saved on 2020Äê ÁùÔÂ 04ÈÕ ÐÇÆÚËÄ, ÏÂÎç 11:46 -->
+<!-- Saved on 2020Äê ÁùÔÂ 10ÈÕ ÐÇÆÚÈý, ÉÏÎç 11:55 -->
 <!-- MuClient version 4.84 -->
 <!-- Written by Nick Gammon -->
 <!-- Home Page: http://www.mushclient.com/ -->
@@ -8,7 +8,7 @@
 <world
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-04 23:46:21"
+   date_saved="2020-06-10 11:55:02"
 
    auto_say_override_prefix="-"
    auto_say_string="say "
@@ -115,7 +115,7 @@
 <triggers
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-04 23:46:21"
+   date_saved="2020-06-10 11:55:02"
   >
   <trigger
    enabled="y"
@@ -191,7 +191,7 @@
   </trigger>
   <trigger
    group="huashan_find"
-   match="^( )*·¶¼×Óð\((\D*)\)"
+   match="^( )*°½Ñ§ÓÑ\((\D*)\)"
    name="huashan_find1"
    regexp="y"
    script="huashan_fight"
@@ -256,29 +256,6 @@
   </trigger>
   <trigger
    enabled="y"
-   group="afight"
-   match="^(&gt; )*(\D*)·¶¼×Óð(\D*)(Çà|Ñ¨µÀ|ÉËº¦)¡£$"
-   name="afight31"
-   regexp="y"
-   script="kezhiwugongcheck1"
-   sequence="100"
-   variable="afight31"
-  >
-  </trigger>
-  <trigger
-   enabled="y"
-   group="afight"
-   keep_evaluating="y"
-   match="^(&gt; )*(\D*)·¶¼×Óð(\D*)£¡$"
-   name="afight11"
-   regexp="y"
-   script="kezhiwugongcheck1"
-   sequence="100"
-   variable="afight11"
-  >
-  </trigger>
-  <trigger
-   enabled="y"
    group="hp"
    match="^(&gt; )*(\D*)¿óÊ¯ÔÚÂ¯»ðÖÐ»¯ÎªÒ»¿é\D*ÂäÔÚµØÉÏ,±»Äã¼ðÆðÊÕ½ø±³ÄÒ¡£"
    name="hp26"
@@ -323,6 +300,27 @@
   </trigger>
   <trigger
    enabled="y"
+   group="boat"
+   match="^(&gt; )*(´¬·ò°ÑÐ¡ÖÛ¿¿ÔÚ°¶±ß£¬¿ìÏÂ´¬°É¡£|ô¹¹«Ëµ¡°µ½À²£¬ÉÏ°¶°É¡±£¬Ëæ¼´°ÑÒ»¿éÌ¤½Å°å´îÉÏµÌ°¶¡£|ÖÕÓÚµ½ÁËÐ¡µº±ß£¬´¬·ò°ÑÐ¡ÖÛ¿¿ÔÚ°¶±ß£¬¿ìÏÂ´¬°É¡£|ÖÕÓÚµ½ÁË°¶±ß£¬´¬·ò°ÑÐ¡ÖÛ¿¿ÔÚ°¶±ß£¬¿ìÏÂ´¬°É¡£)"
+   name="boat1"
+   regexp="y"
+   script="boatOut"
+   sequence="100"
+   variable="boat1"
+  >
+  </trigger>
+  <trigger
+   group="yilidoorr"
+   match="^(&gt; )*(¹ýÁËÆ¬¿Ì£¬Äã¸Ð¾õ×Ô¼ºÒÑ¾­½«ÐþÌìÎÞ¼«Éñ¹¦|Äã½«º®±ùÕæÆø°´ÖÜÌìÖ®ÊÆ°áÔËÁËÒ»ÖÜ|ÄãÖ»¾õÕæÁ¦ÔË×ªË³³©£¬ÖÜÉíÆøÁ¦³äÅæ|Äã½«´¿ÑôÉñÍ¨¹¦ÔËÐÐÍê±Ï|ÄãÖ»¾õÉñÔª¹éÒ»£¬È«Éí¾«Á¦ÃÖÂþ|Äã½«ÄÚÏ¢×ßÁË¸öÒ»¸öÖÜÌì|Äã½«ÄÚÏ¢ÓÎ×ßÈ«Éí£¬µ«¾õÈ«ÉíÊæ³©|Äã½«ÕæÆø±ÆÈëÌåÄÚ£¬½«È«Éí¾Û¼¯µÄÀ¶É«ÆøÏ¢|Äã½«×ÏÆøÔÚÌåÄÚÔËÐÐÁËÒ»¸öÖÜÌì|ÄãÔË¹¦Íê±Ï£¬Õ¾ÁËÆðÀ´|ÄãÒ»¸öÖÜÌìÐÐ½«ÏÂÀ´£¬¾«Éñ¶¶ËÓµÄÕ¾ÁËÆðÀ´|Äã·Ö¿ªË«ÊÖ£¬ºÚÆøÂýÂý³ÁÏÂ|Äã½«ÄÚÏ¢×ßÂúÒ»¸öÖÜÌì£¬Ö»¸Ðµ½È«ÉíÍ¨Ì©|ÄãÕæÆøÔÚÌåÄÚÔËÐÐÁËÒ»¸öÖÜÌì£¬ÀäÈÈÕæÆøÊÕÓÚµ¤Ìï|ÄãÕæÆøÔÚÌåÄÚÔËÐÐÁËÒ»¸öÖÜÌì£¬»º»ºÊÕÆøÓÚµ¤Ìï|ÄãË«ÑÛÎ¢±Õ£¬»º»º½«ÌìµØ¾«»ªÖ®ÆøÎüÈëÌåÄÚ|ÄãÂýÂýÊÕÆø£¬¹éÈëµ¤Ìï£¬Õö¿ªÑÛ¾¦|Äã½«ÄÚÏ¢ÓÖÔËÁËÒ»¸öÐ¡ÖÜÌì£¬»º»ºµ¼Èëµ¤Ìï|Äã¸Ð¾õ¶¾ËØÔ½×ªÔ½¿ì£¬¾Í¿ìÒªÍÑÀëÄãµÄ¿ØÖÆÁË£¡|Äã½«ÖÜÉíÄÚÏ¢¹áÍ¨¾­Âö£¬»º»ºÕö¿ªÑÛ¾¦£¬Õ¾ÁËÆðÀ´|Äãºôôâ¾ÅÑô£¬±§Ò»º¬Ôª£¬»º»ºÕö¿ªË«ÑÛ|ÄãÎüÆøÈëµ¤Ìï£¬ÕæÆøÔË×ª½¥»º£¬ÂýÂýÊÕ¹¦|Äã½«ÕæÆøÔÚÌåÄÚÑØÂöÂçÔËÐÐÁËÒ»È¦£¬»º»ºÄÉÈëµ¤Ìï|Äã½«ÄÚÏ¢ÔÚÌåÄÚÔËÐÐÊ®¶þÖÜÌì£¬·µ»Øµ¤Ìï|Äã½«ÄÚÏ¢×ßÁË¸öÐ¡ÖÜÌì£¬Á÷»Øµ¤Ìï£¬ÊÕ¹¦Õ¾ÁËÆðÀ´|¹ýÁËÆ¬¿Ì£¬ÄãÒÑÓëÕâ´ó×ÔÈ»ÈÚºÏÔÚÒ»Æð£¬¾«Éñ¶¶ËÓµÄÕ¾ÁËÆð|Äã¸Ðµ½×Ô¼ººÍÌìµØÈÚÎªÒ»Ìå£¬È«ÉíÇåË¬ÈçÔ¡´º·ç£¬ÈÌ²»×¡Êæ³©µÄÉëÒ÷ÁËÒ»Éù£¬»º»ºÕö¿ªÁËÑÛ¾¦)"
+   name="yilidoorr3"
+   regexp="y"
+   script="yilicheckwd"
+   sequence="100"
+   variable="yilidoorr3"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
    group="hp"
    match="^(&gt; )*(ºöÈ»Ò»Õó´Ì¹ÇµÄÆæº®Ï®À´£¬ÄãÖÐµÄÐÇËÞÕÆ¶¾·¢×÷ÁË|ºöÈ»Ò»¹Éº®ÆøÓÌËÆ±ù¼ý£¬Ñ­×ÅÊÖ±Û£¬Ñ¸ËÙÎÞÂ×µÄÉäÈëÐØÌÅ£¬ÄãÖÐµÄº®¶¾·¢×÷ÁË)"
    name="hp19"
@@ -340,6 +338,16 @@
    script="huashan_where"
    sequence="100"
    variable="huashan_npc1"
+  >
+  </trigger>
+  <trigger
+   group="huashan_cut"
+   match="^(&gt; )*(ÂÒÇÐ±ðÈËÉ±µÄÈË¸ÉÂï°¡|ÄãÊÖÉÏÕâ¼þ±øÆ÷ÎÞ·æÎÞÈÐ|ÄãµÃÓÃ¼þ·æÀûµÄÆ÷¾ß²ÅÄÜÇÐÏÂÕâÊ¬ÌåµÄÍ·À´)"
+   name="huashan_cut2"
+   regexp="y"
+   script="huashan_cut_weapon"
+   sequence="100"
+   variable="huashan_cut2"
   >
   </trigger>
   <trigger
@@ -362,6 +370,26 @@
    script="eatdan"
    sequence="100"
    variable="hp30"
+  >
+  </trigger>
+  <trigger
+   group="checkTop"
+   match="^(&gt; )*(ÄãÏÖÔÚÒÑ¾­×éºÏ|ÄãÒÑ×¼±¸ÓÐÒ»ÖÖ¼¼ÄÜÁË|ÄãÖÁÉÙ²»»áÕâÁ½ÖÖÈ­½Å¼¼ÄÜµÄÆäÖÐÖ®Ò»|ÄãÏÖÔÚÒÑ¾­×¼±¸ºÃÌØÊâ¼¼ÄÜÁË)"
+   name="checkTop1"
+   regexp="y"
+   script="beiOk"
+   sequence="100"
+   variable="checkTop1"
+  >
+  </trigger>
+  <trigger
+   group="huashan_yls"
+   match="^(&gt; )*(ÕâÀïÃ»ÓÐÕâ¸öÈË¡£|ÄãÉíÉÏÃ»ÓÐÕâÑù¶«Î÷¡£|ÕâÈËºÃÏó²»ÊÇÄãÉ±µÄ°É£¿|ÄãµÄÁîÅÆÄØ|Äã»¹Ã»ÓÐÈ¥ÕÒ¶ñÔô£¬ÔõÃ´¾ÍÀ´¼ÀÌ³ÁË£¿)"
+   name="huashan_yls1"
+   regexp="y"
+   script="huashan_yls_fail"
+   sequence="100"
+   variable="huashan_yls1"
   >
   </trigger>
   <trigger
@@ -497,6 +525,66 @@
   >
   </trigger>
   <trigger
+   group="hqgzcFind"
+   match="^(&gt; )*\D*ÌÆ¿É\((\D*)\)"
+   name="hqgzcFind1"
+   regexp="y"
+   script="hqgzcTarget"
+   sequence="100"
+   variable="hqgzcFind1"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcTrade"
+   match="^(&gt; )*\D*ÌÆ¿ÉÂþ²»¾­ÐÄµÄ¡°àÅ¡±ÁËÒ»Éù£¬ËÆºõ¸ù±¾Ã»ÔÚÌýÄãËµÊ²Ã´¡£"
+   name="hqgzcTrade4"
+   regexp="y"
+   script="hqgzcAskMenu"
+   sequence="100"
+   variable="hqgzcTrade4"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcTrade"
+   match="^(&gt; )*\D*ÌÆ¿ÉËµµÀ£º¡¸\D*¾Í(\D*)Á½Òø×Ó°É¡£¡¹"
+   name="hqgzcTrade1"
+   regexp="y"
+   script="hqgzcPay"
+   sequence="100"
+   variable="hqgzcTrade1"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcTrade"
+   match="^(&gt; )*\D*ÌÆ¿ÉËµµÀ£º¡¸ÂÞàÂÊ²Ã´°¡£¿Ò»¿Ú¼Û£¬ÎÒ¶¼ËµÁË£¬²»Òª¾ÍËãÁË¡£¡¹"
+   name="hqgzcTrade3"
+   regexp="y"
+   script="hqgzcNoPay"
+   sequence="100"
+   variable="hqgzcTrade3"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcTrade"
+   match="^(&gt; )*\D*ÌÆ¿ÉËµµÀ£º¡¸àÅ£¬ÄãÒªµÄ»°£¬¾ÍÄÃÈ¥°É¡£¡¹"
+   name="hqgzcTrade2"
+   regexp="y"
+   script="hqgzcTradeOK"
+   sequence="100"
+   variable="hqgzcTrade2"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcTrade"
+   match="^(&gt; )*\D*ÌÆ¿ÉËµµÀ£º¡¸àÅ£¬ÄãÒª¾ÍÄÃÈ¥°É¡£¡¹"
+   name="hqgzcTrade5"
+   regexp="y"
+   script="hqgzcTradeOK"
+   sequence="100"
+   variable="hqgzcTrade5"
+  >
+  </trigger>
+  <trigger
    group="huashan_egg"
    match="^(&gt; )*\s*(\D*)\s*-\s*(north|east|south|west|northup|eastup|southup|westup|northdown|eastdown|southdown|westdown|northeast|southeast|northwest|southwest|enter|out)"
    name="huashan_egg1"
@@ -504,6 +592,26 @@
    script="huashan_egg_ss"
    sequence="100"
    variable="huashan_egg1"
+  >
+  </trigger>
+  <trigger
+   group="cu_shengzi"
+   match="^(&gt; )*¡¤ÄãµÄ¸öÈË´¢ÎïÏä±£´æÓÐ(\D*)¼þÎïÆ·"
+   name="cu_shengzi1"
+   regexp="y"
+   script="currentCwxCount"
+   sequence="100"
+   variable="cu_shengzi1"
+  >
+  </trigger>
+  <trigger
+   group="cu_shengzi"
+   match="^(&gt; )*¡¤ÄãµÄ¸öÈË´¢ÎïÏäÒ»¹²¿ÉÒÔ±£´æ\((\D*)¼þÎïÆ·"
+   name="cu_shengzi2"
+   regexp="y"
+   script="currentCwxTotalCount"
+   sequence="100"
+   variable="cu_shengzi2"
   >
   </trigger>
   <trigger
@@ -515,6 +623,36 @@
    script="stopJob"
    sequence="100"
    variable="hp31"
+  >
+  </trigger>
+  <trigger
+   group="huashan_fight"
+   match="^(&gt; )*°½Ñ§ÓÑ¡¸Å¾¡¹µÄÒ»Éùµ¹ÔÚµØÉÏ"
+   name="huashan_fight1"
+   regexp="y"
+   script="huashan_getget"
+   sequence="100"
+   variable="huashan_fight1"
+  >
+  </trigger>
+  <trigger
+   group="huashan_fight"
+   match="^(&gt; )*°½Ñ§ÓÑ´Ò´ÒÀë¿ª¡£"
+   name="huashan_fight3"
+   regexp="y"
+   script="huashanFindFail"
+   sequence="100"
+   variable="huashan_fight3"
+  >
+  </trigger>
+  <trigger
+   group="huashan_fight"
+   match="^(&gt; )*°½Ñ§ÓÑÉñÖ¾ÃÔºý£¬½ÅÏÂÒ»¸ö²»ÎÈ£¬µ¹ÔÚµØÉÏ»èÁË¹ýÈ¥¡£"
+   name="huashan_fight2"
+   regexp="y"
+   script="huashan_faint"
+   sequence="100"
+   variable="huashan_fight2"
   >
   </trigger>
   <trigger
@@ -549,49 +687,6 @@
   >
   </trigger>
   <trigger
-   group="xuezhuFinish"
-   match="^(&gt; )*³ÌÁéËØËµµÀ£º¡¸Äã¹ûÈ»ÑÔ¶øÓÐÐÅ£¬ÏÂ´ÎÄãÒªÔÙÈ¥Îå¶¾½ÌÀ´ÕÒÎÒ°É¡£¡¹"
-   name="xuezhuFinish1"
-   regexp="y"
-   script="xuezhuFinish"
-   sequence="100"
-   variable="xuezhuFinish1"
-  >
-  </trigger>
-  <trigger
-   enabled="y"
-   group="huashan_fight"
-   match="^(&gt; )*·¶¼×Óð¡¸Å¾¡¹µÄÒ»Éùµ¹ÔÚµØÉÏ"
-   name="huashan_fight1"
-   regexp="y"
-   script="huashan_getget"
-   sequence="100"
-   variable="huashan_fight1"
-  >
-  </trigger>
-  <trigger
-   enabled="y"
-   group="huashan_fight"
-   match="^(&gt; )*·¶¼×Óð´Ò´ÒÀë¿ª¡£"
-   name="huashan_fight3"
-   regexp="y"
-   script="huashanFindFail"
-   sequence="100"
-   variable="huashan_fight3"
-  >
-  </trigger>
-  <trigger
-   enabled="y"
-   group="huashan_fight"
-   match="^(&gt; )*·¶¼×ÓðÉñÖ¾ÃÔºý£¬½ÅÏÂÒ»¸ö²»ÎÈ£¬µ¹ÔÚµØÉÏ»èÁË¹ýÈ¥¡£"
-   name="huashan_fight2"
-   regexp="y"
-   script="huashan_faint"
-   sequence="100"
-   variable="huashan_fight2"
-  >
-  </trigger>
-  <trigger
    enabled="y"
    group="job_exp"
    match="^(&gt; )*¹§Ï²Äã£¡Äã³É¹¦µÄÍê³ÉÁË(\D*)ÈÎÎñ£¡Äã±»½±ÀøÁË"
@@ -614,6 +709,26 @@
   >
   </trigger>
   <trigger
+   group="litxuexi"
+   match="^(&gt; )*¹ËÑ×Îä¶Ô×ÅÄã¶ËÏêÁËÒ»·¬µÀ£º¡°ÄãÒò¾­ÑéËùÖÆ£¬ÔÝÊ±ÎÞ·¨ÔÙ½øÐÞ¸ü¸ßÉîµÄÑ§ÎÊÁË¡£¡±"
+   name="litxuexi1"
+   regexp="y"
+   script="litxuexiover"
+   sequence="100"
+   variable="litxuexi1"
+  >
+  </trigger>
+  <trigger
+   group="huashan_getnpc"
+   match="^(&gt; )*¹âÌì»¯ÈÕµÄÏëÇÀ½Ù°¡"
+   name="huashan_getnpc3"
+   regexp="y"
+   script="huashan_getagain"
+   sequence="100"
+   variable="huashan_getnpc3"
+  >
+  </trigger>
+  <trigger
    enabled="y"
    group="job_exp"
    match="^(&gt; )*ºÃ£¡ÈÎÎñÍê³É£¬Äã±»½±ÀøÁË£º(\D*)µãÊµÕ½¾­Ñé£¬(\D*)µãÇ±ÄÜ¡£(\D*)Éñ¡£$"
@@ -625,6 +740,115 @@
   >
   </trigger>
   <trigger
+   group="hqgzcFinish"
+   match="^(&gt; )*ºÃÏñ»¹È±ÉÙÒ»Ð©Ô­ÁÏ°¡£¿"
+   name="hqgzcFinish4"
+   regexp="y"
+   script="hqgzcFangqiGo"
+   sequence="100"
+   variable="hqgzcFinish4"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcAccept"
+   match="^(&gt; )*ºéÆß¹«ËµµÀ£º¡¸\D*£¬ÄãÓÖÃ»ÔÚÎÒÕâÀïÁìÈÎÎñ£¬Ï¹·ÅÆúÊ²Ã´Ñ½"
+   name="hqgzcAccept7"
+   regexp="y"
+   script="hqgzcStart"
+   sequence="100"
+   variable="hqgzcAccept7"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcAccept"
+   match="^(&gt; )*ºéÆß¹«ËµµÀ£º¡¸°¦£¡ÎÒÕâÀïÊ²Ã´Ô­ÁÏ¶¼Ã»ÓÐ£¬ÄãËÙËÙ°ïÎÒÕÒÀ´°É¡£¡¹"
+   name="hqgzcAccept4"
+   regexp="y"
+   script="hqgzcCaiPuDetail2"
+   sequence="100"
+   variable="hqgzcAccept4"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcAskFail"
+   match="^(&gt; )*ºéÆß¹«ËµµÀ£º¡¸¼ÈÈ»×ö²»ÁË£¬Ò²¾Í²»ÃãÇ¿ÄãÁË¡£¡¹"
+   name="hqgzcAskFail1"
+   regexp="y"
+   script="hqgzcBegin"
+   sequence="100"
+   variable="hqgzcAskFail1"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcAccept"
+   match="^(&gt; )*ºéÆß¹«ËµµÀ£º¡¸ÄãÕýÃ¦×Å±ðµÄÊÂÇéÄØ"
+   name="hqgzcAccept6"
+   regexp="y"
+   script="hqgzcFail"
+   sequence="100"
+   variable="hqgzcAccept6"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcAccept"
+   match="^(&gt; )*ºéÆß¹«ËµµÀ£º¡¸ÎÒÏÖÔÚ²»¶ö£¬Äã»¹ÊÇÏÈÈ¥ÐÝÏ¢Ò»»á°É¡£¡¹"
+   name="hqgzcAccept3"
+   regexp="y"
+   script="hqgzcNotHungry"
+   sequence="100"
+   variable="hqgzcAccept3"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcAccept"
+   match="^(&gt; )*ºéÆß¹«ËµµÀ£º¡¸ÎÒÕâÀïÒÑ¾­ÓÐÐ©Ô­ÁÏ£¬ÏÈ¸øÄã£¬ÆäÓàµÄÄãÈ¥ÕÒ°É£¡¡¹"
+   name="hqgzcAccept5"
+   regexp="y"
+   script="hqgzcCaiPuDetail2"
+   sequence="100"
+   variable="hqgzcAccept5"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcAccept"
+   match="^(&gt; )*ºéÆß¹«ËµµÀ£º¡¸ÕâÎ»(\D*)µÄÇ±ÄÜÒÑ¾­ÕâÃ´¶àÁË£¬»¹ÊÇÏÈÈ¥ÓÃÍêÔÙÀ´°É£¡¡¹"
+   name="hqgzcAccept2"
+   regexp="y"
+   script="hqgzc_xuexi"
+   sequence="100"
+   variable="hqgzcAccept2"
+  >
+  </trigger>
+  <trigger
+   match="^(&gt; )*ºéÆß¹«ËµµÀ£º¡¸ÕâÎ»×³Ê¿µÄÇ±ÄÜÒÑ¾­ÕâÃ´¶àÁË£¬»¹ÊÇÏÈÈ¥ÓÃÍêÔÙÀ´°É£¡¡¹"
+   name="hqgzcFinish7"
+   regexp="y"
+   script="hqgzcNotHungry"
+   sequence="100"
+   variable="hqgzcFinish7"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcAccept"
+   match="^(&gt; )*ºéÆß¹«ËµµÀ£º¡¸àÅ£¿ÎÒ²»ÊÇ¸æËßÄãÁËÂð£¬¿ìÈ¥È¡Ô­ÁÏ°¡£¬²»Ïë×ö¾ÍËãÁË£¡¡¹"
+   name="hqgzcAccept8"
+   regexp="y"
+   script="hqgzcFangqiGo"
+   sequence="100"
+   variable="hqgzcAccept8"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcFinish"
+   match="^(&gt; )*ºéÆß¹«ÎªÄãÔÚÇ®×¯´æÈëÁË(\D*)¶§»Æ½ð¡£"
+   name="hqgzcFinish5"
+   regexp="y"
+   script="hqgzcFinishGold"
+   sequence="100"
+   variable="hqgzcFinish5"
+  >
+  </trigger>
+  <trigger
    enabled="y"
    group="job_exp"
    match="^(&gt; )*ºéÆß¹«ÎªÄãÔÚÇ®×¯Àï´æÈë(\D*)¶§»Æ½ð¡£"
@@ -633,6 +857,26 @@
    script="job_gold_h7gzc"
    sequence="100"
    variable="job_exp21"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcAccept"
+   match="^(&gt; )*ºéÆß¹«ÔÚÄãµÄ¶ú±ßÇÄÉùËµµÀ£ºÌýËµ(\D*)µÄ(\D*)ÊÖÖÐÓÐ(\D*)£¬Äã°ïÎÒÈ¥ÕÒÀ´°É£¡"
+   name="hqgzcAccept1"
+   regexp="y"
+   script="hqgzcCaiPu"
+   sequence="100"
+   variable="hqgzcAccept1"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcFinish"
+   match="^(&gt; )*ºéÆß¹«Ö¸µãÁËÄãÒ»Ð©ÎäÑ§ÉÏµÄÃÔ½ò£¬Äã»ñµÃÁË(\D*)Ç±ÄÜ¡£"
+   name="hqgzcFinish1"
+   regexp="y"
+   script="hqgzcFinish"
+   sequence="100"
+   variable="hqgzcFinish1"
   >
   </trigger>
   <trigger
@@ -735,6 +979,26 @@
   >
   </trigger>
   <trigger
+   group="checknext"
+   match="^(&gt; )*Äã°Ñ &quot;action&quot; Éè¶¨Îª &quot;¼ÌÐøÇ°½ø&quot; ³É¹¦Íê³É¡£$"
+   name="checknext1"
+   regexp="y"
+   script="checkNextOk"
+   sequence="100"
+   variable="checknext1"
+  >
+  </trigger>
+  <trigger
+   group="Yaobags"
+   match="^(&gt; )*Äã°Ñ &quot;action&quot; Éè¶¨Îª &quot;¼ì²éÒ©Æ·&quot; ³É¹¦Íê³É¡£$"
+   name="Yaobags2"
+   regexp="y"
+   script="checkYaoBagsOver"
+   sequence="100"
+   variable="Yaobags2"
+  >
+  </trigger>
+  <trigger
    group="walk"
    match="^(&gt; )*Äã°Ñ &quot;action&quot; Éè¶¨Îª &quot;ÕýÔÚ¸ÏÂ·ÖÐ&quot; ³É¹¦Íê³É¡£$"
    name="walk1"
@@ -752,6 +1016,26 @@
    script="huashan_npc_goon"
    sequence="100"
    variable="huashan_npc3"
+  >
+  </trigger>
+  <trigger
+   group="qu_fire"
+   match="^(&gt; )*Äã°Ñ»ðÕÛ´Ó¸öÈË´¢ÎïÏäÖÐÌáÈ¡³öÀ´¡£$"
+   name="qu_fire2"
+   regexp="y"
+   script="checkFireQuSuccess"
+   sequence="100"
+   variable="qu_fire2"
+  >
+  </trigger>
+  <trigger
+   group="qu_shengzi"
+   match="^(&gt; )*Äã°ÑÉþ×Ó´Ó¸öÈË´¢ÎïÏäÖÐÌáÈ¡³öÀ´¡£$"
+   name="qu_shengzi2"
+   regexp="y"
+   script="checkShengziQuSuccess"
+   sequence="100"
+   variable="qu_shengzi2"
   >
   </trigger>
   <trigger
@@ -788,6 +1072,36 @@
   >
   </trigger>
   <trigger
+   group="qu_shengzi"
+   match="^(&gt; )*Äã²¢Ã»ÓÐ±£´æ¸ÃÎïÆ·¡£$"
+   name="qu_shengzi1"
+   regexp="y"
+   script="checkShengziQuFail"
+   sequence="100"
+   variable="qu_shengzi1"
+  >
+  </trigger>
+  <trigger
+   group="qu_fire"
+   match="^(&gt; )*Äã²¢Ã»ÓÐ±£´æ¸ÃÎïÆ·¡£$"
+   name="qu_fire1"
+   regexp="y"
+   script="checkFireQuFail"
+   sequence="100"
+   variable="qu_fire1"
+  >
+  </trigger>
+  <trigger
+   group="huashan_getnpc"
+   match="^(&gt; )*Äã´Ó(\D*)µÄÊ¬ÌåÉíÉÏËÑ³öÒ»¿éÁîÅÆ¡£"
+   name="huashan_getnpc1"
+   regexp="y"
+   script="huashan_backgogo"
+   sequence="100"
+   variable="huashan_getnpc1"
+  >
+  </trigger>
+  <trigger
    enabled="y"
    group="hp"
    match="^(&gt; )*ÄãµÃµ½ÁËÒ»·âÊ§ÂäµÄÐÅ¼ã¡£"
@@ -821,9 +1135,8 @@
   >
   </trigger>
   <trigger
-   enabled="y"
    group="huashan_find"
-   match="^(&gt; )*Äã¶Ô×Å·¶¼×Óð´óºÈÒ»Éù£º¡¸³ôÔô£¡"
+   match="^(&gt; )*Äã¶Ô×Å°½Ñ§ÓÑ´óºÈÒ»Éù£º¡¸³ôÔô£¡"
    name="huashan_find4"
    regexp="y"
    script="huashan_fight_kill"
@@ -832,13 +1145,33 @@
   >
   </trigger>
   <trigger
-   group="zxz_dfly"
-   match="^(&gt; )*Äã¸ø³ÌÁéËØÒ»Ö»Ñ©Öë¡£"
-   name="zxz_dfly3"
+   group="outSldGive_test"
+   match="^(&gt; )*Äã¸ø´¬·òÒ»¿éÍ¨ÐÐÁîÅÆ¡£"
+   name="outSldGive_test1"
    regexp="y"
-   script="xz_finish"
+   script="outSldWait"
    sequence="100"
-   variable="zxz_dfly3"
+   variable="outSldGive_test1"
+  >
+  </trigger>
+  <trigger
+   group="huashan_yls_ask"
+   match="^(&gt; )*Äã¸øÔÀÁéÉºÒ»¿Å(\D*)µÄÊ×¼¶¡£"
+   name="huashan_yls_ask2"
+   regexp="y"
+   script="huashan_yls_back1"
+   sequence="100"
+   variable="huashan_yls_ask2"
+  >
+  </trigger>
+  <trigger
+   group="dmlfight"
+   match="^(&gt; )*Äã»³ÒÉ×Ô¼ºÒ²Ðí´ÓÀ´¾ÍÃ»ÓÐµ½¹ýÒ»¸ö½Ð×öÃÎµûÂ¥µÄµØ·½¡£"
+   name="dmlfight4"
+   regexp="y"
+   script="dmlOut"
+   sequence="100"
+   variable="dmlfight4"
   >
   </trigger>
   <trigger
@@ -897,13 +1230,23 @@
   >
   </trigger>
   <trigger
-   group="zxz_dfly"
-   match="^(&gt; )*Äã½«Ñ©Öë·öÁËÆðÀ´±³ÔÚ±³ÉÏ¡£"
-   name="zxz_dfly2"
+   group="huashan_getnpc"
+   match="^(&gt; )*Äã½«(\D*)µÄÊ¬Ìå·öÁËÆðÀ´±³ÔÚ±³ÉÏ¡£"
+   name="huashan_getnpc2"
    regexp="y"
-   script="give_cheng"
+   script="huashan_get_corpse_test"
    sequence="100"
-   variable="zxz_dfly2"
+   variable="huashan_getnpc2"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcFinish"
+   match="^(&gt; )*Äã½«Ô­ÁÏ·ÅÔÚÒ»Æð£¬Ò»»á¾Í×ö³öÁËÒ»ÅÌÏã¿ÚÃÀÎ¶µÄ¡¸ÓñµÑË­¼ÒÌýÂäÃ·¡¹¡£"
+   name="hqgzcFinish2"
+   regexp="y"
+   script="hqgzcFinishT"
+   sequence="100"
+   variable="hqgzcFinish2"
   >
   </trigger>
   <trigger
@@ -915,6 +1258,35 @@
    script="jobExpExtra"
    sequence="100"
    variable="job_exp3"
+  >
+  </trigger>
+  <trigger
+   group="sx2refuse"
+   match="^(&gt; )*Äã¿´ÁË¿´ÐÅ£¬¾ö¶¨»¹ÊÇ²»È¥ÁË¡£"
+   name="letteryichang2"
+   regexp="y"
+   script="sx2overok"
+   sequence="100"
+   variable="letteryichang2"
+  >
+  </trigger>
+  <trigger
+   group="hscaidi"
+   match="^(&gt; )*ÄãÂÒ×ßÁËÒ»Í¨£¬¾ÓÈ»·¢ÏÖ×Ô¼º×ß»ØÁËÔ­µØ¡£"
+   name="hscaidi1"
+   regexp="y"
+   script="hscaidi_out1"
+   sequence="100"
+   variable="hscaidi1"
+  >
+  </trigger>
+  <trigger
+   match="^(&gt; )*ÄãÉíÉÏÃ»ÓÐ°üÀ¨ÈÎºÎÌØÊâ×´Ì¬¡£"
+   name="prepare_neili10"
+   regexp="y"
+   script="prepare_neili_over"
+   sequence="100"
+   variable="prepare_neili10"
   >
   </trigger>
   <trigger
@@ -939,6 +1311,48 @@
   >
   </trigger>
   <trigger
+   group="checkTop"
+   match="^(&gt; )*ÄãÏÖÔÚÃ»ÓÐ¼¤·¢ÈÎºÎÓÐÐ§ÌØÊâ¼¼ÄÜ¡£"
+   name="checkTop2"
+   regexp="y"
+   script="beiNone"
+   sequence="100"
+   variable="checkTop2"
+  >
+  </trigger>
+  <trigger
+   group="xxsdAsk"
+   match="^(&gt; )*ÄãÏë¹¥»÷Ë­£¿$"
+   name="xxsdAsk5"
+   regexp="y"
+   script="xxsdover"
+   sequence="100"
+   variable="xxsdAsk5"
+  >
+  </trigger>
+  <trigger
+   custom_colour="2"
+   group="hqgzcFinish"
+   lines_to_match="2"
+   match="^(&gt; )*ÄãÏòºéÆß¹«´òÌýÓÐ¹Ø¡º»Æ½ð½±Àø¡»µÄÏûÏ¢¡£\n(&gt; )*ºéÆß¹«ËµµÀ£º¡¸½ñÌìÎÒ»¹ÊÇÏÈÖ¸µãÄãÎä¹¦°É¡£¡¹"
+   multi_line="y"
+   name="hqgzcFinish6"
+   regexp="y"
+   script="hqgzcFinishTT"
+   sequence="100"
+  >
+  </trigger>
+  <trigger
+   group="xxsdAsk"
+   match="^(&gt; )*ÄãÏòÊ¨ºð×Ó´òÌýÓÐ¹Ø¡ºfqyy¡»µÄÏûÏ¢"
+   name="xxsdAsk1"
+   regexp="y"
+   script="xxsdask"
+   sequence="100"
+   variable="xxsdAsk1"
+  >
+  </trigger>
+  <trigger
    group="huashan_ask"
    match="^(&gt; )*ÄãÏòÔÀ²»Èº´òÌýÓÐ¹Ø¡ºjob¡»µÄÏûÏ¢¡£$"
    name="huashan_ask1"
@@ -946,6 +1360,16 @@
    script="huashan_ask"
    sequence="100"
    variable="huashan_ask1"
+  >
+  </trigger>
+  <trigger
+   group="huashan_yls_ask"
+   match="^(&gt; )*ÄãÏòÔÀÁéÉº´òÌýÓÐ¹Ø¡ºÁ¦²»´ÓÐÄ¡»µÄÏûÏ¢¡£"
+   name="huashan_yls_ask1"
+   regexp="y"
+   script="huashan_yls_back"
+   sequence="100"
+   variable="huashan_yls_ask1"
   >
   </trigger>
   <trigger
@@ -988,6 +1412,16 @@
    script="StartKuangfeng"
    sequence="100"
    variable="fight19"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcFinish"
+   match="^(&gt; )*ÄãÒ»Ê±×ßÉñ£¬·Å´íÁËÅäÁÏ£¬ÀË·ÑÁËÖÆ³É¡¸ÓñµÑË­¼ÒÌýÂäÃ·¡¹µÄ´óºÃ»ú»á¡£"
+   name="hqgzcFinish3"
+   regexp="y"
+   script="hqgzcFinish1"
+   sequence="100"
+   variable="hqgzcFinish3"
   >
   </trigger>
   <trigger
@@ -1045,6 +1479,7 @@
   >
   </trigger>
   <trigger
+   enabled="y"
    group="locate_unknown"
    lines_to_match="7"
    match="^(&gt; )*Éè¶¨»·¾³±äÁ¿£ºlook\s*\=\s*\&quot;YES\&quot;\n&gt;\s*(\D*)\s*\ -\s*"
@@ -1054,6 +1489,36 @@
    script="local_unknown_room"
    sequence="100"
    variable="locate_unknown1"
+  >
+  </trigger>
+  <trigger
+   group="xxsdAsk"
+   match="^(&gt; )*Ê¨ºð×Ó¡¸Å¾¡¹µÄÒ»Éùµ¹ÔÚµØÉÏ£¬ÕõÔú×Å³é¶¯ÁË¼¸ÏÂ¾ÍËÀÁË¡£$"
+   name="xxsdAsk4"
+   regexp="y"
+   script="xxsdover"
+   sequence="100"
+   variable="xxsdAsk4"
+  >
+  </trigger>
+  <trigger
+   group="xxsdAsk"
+   match="^(&gt; )*Ê¨ºð×ÓÉñÖ¾ÃÔºý£¬½ÅÏÂÒ»¸ö²»ÎÈ£¬µ¹ÔÚµØÉÏ»èÁË¹ýÈ¥¡£$"
+   name="xxsdAsk3"
+   regexp="y"
+   script="xxsdget"
+   sequence="100"
+   variable="xxsdAsk3"
+  >
+  </trigger>
+  <trigger
+   group="xxsdAsk"
+   match="^(&gt; )*Ê¨ºð×ÓÒÑ¾­ÎÞ·¨»¹ÊÖÁË£¡$"
+   name="xxsdAsk6"
+   regexp="y"
+   script="xxsdget"
+   sequence="100"
+   variable="xxsdAsk6"
   >
   </trigger>
   <trigger
@@ -1097,16 +1562,6 @@
    script="local_time"
    sequence="100"
    variable="locate6"
-  >
-  </trigger>
-  <trigger
-   group="zxz_dfly"
-   match="^(&gt; )*Ñ©ÖëÉñÖ¾ÃÔºý£¬½ÅÏÂÒ»¸ö²»ÎÈ£¬µ¹ÔÚµØÉÏ»èÁË¹ýÈ¥¡£"
-   name="zxz_dfly1"
-   regexp="y"
-   script="getxue_zhuX"
-   sequence="100"
-   variable="zxz_dfly1"
   >
   </trigger>
   <trigger
@@ -1191,6 +1646,16 @@
   >
   </trigger>
   <trigger
+   group="huashan_yls"
+   match="^(&gt; )*ÔÀÁéÉºÔÚÄãµÄÁîÅÆÉÏÐ´ÏÂÁËÒ»¸ö (Ò»|¶þ) ×Ö¡£"
+   name="huashan_yls2"
+   regexp="y"
+   script="huashan_yls_ask"
+   sequence="100"
+   variable="huashan_yls2"
+  >
+  </trigger>
+  <trigger
    enabled="y"
    group="job_exp"
    match="^(&gt; )*ÔãÁË£¡(\D*)ËÀÍö£¬ÈÎÎñÊ§°Ü£¡"
@@ -1202,14 +1667,53 @@
   >
   </trigger>
   <trigger
-   enabled="y"
+   group="hscaidi"
+   match="^(&gt; )*Õâ¸ö·½ÏòÃ»ÓÐ³öÂ·¡£$"
+   name="hscaidi2"
+   regexp="y"
+   script="hscaidi_out2"
+   sequence="100"
+   variable="hscaidi2"
+  >
+  </trigger>
+  <trigger
+   group="huashan_yls"
+   match="^(&gt; )*ÕâºÃÏó²»ÊÇÄãÁìµÄÁîÅÆ°É£¿"
+   name="huashan_yls3"
+   regexp="y"
+   script="huashan_yls_lingpai"
+   sequence="100"
+   variable="huashan_yls3"
+  >
+  </trigger>
+  <trigger
    group="huashan_fight"
-   match="^(&gt; )*ÕâÀïÃ»ÓÐ fan jiayu¡£"
+   match="^(&gt; )*ÕâÀïÃ»ÓÐ ao xueyou¡£"
    name="huashan_fight4"
    regexp="y"
    script="huashanFindAct"
    sequence="100"
    variable="huashan_fight4"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcTrade"
+   match="^(&gt; )*ÕâÀïÃ»ÓÐÕâ¸öÈË¡£"
+   name="hqgzcTrade6"
+   regexp="y"
+   script="hqgzcLost"
+   sequence="100"
+   variable="hqgzcTrade6"
+  >
+  </trigger>
+  <trigger
+   group="xxsdAsk"
+   match="^(&gt; )*ÕâÀïÃ»ÓÐÕâ¸öÈË¡£$"
+   name="xxsdAsk2"
+   regexp="y"
+   script="xxsdover"
+   sequence="100"
+   variable="xxsdAsk2"
   >
   </trigger>
   <trigger
@@ -1220,6 +1724,26 @@
    script="huashan_nobody"
    sequence="100"
    variable="huashan_ask2"
+  >
+  </trigger>
+  <trigger
+   group="huashan_cut"
+   match="^(&gt; )*Ö»Ìý¡°ßÇ¡±µÄÒ»Éù£¬Äã½«(\D*)µÄÊ×¼¶Õ¶ÁËÏÂÀ´£¬ÌáÔÚÊÖÖÐ¡£"
+   name="huashan_cut1"
+   regexp="y"
+   script="huashan_cut_con"
+   sequence="100"
+   variable="huashan_cut1"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcCaiPuDetail"
+   match="^(\D*)\s*(\D*)\s*(\D*)$"
+   name="hqgzcCaiPuDetail1"
+   regexp="y"
+   script="hqgzcCaiPuDetail1"
+   sequence="100"
+   variable="hqgzcCaiPuDetail1"
   >
   </trigger>
   <trigger
@@ -1256,7 +1780,6 @@
   >
   </trigger>
   <trigger
-   enabled="y"
    group="huashan_fight"
    match="^(Ëû|Ëý)´©´÷×Å£º$"
    name="huashan_fight5"
@@ -1267,7 +1790,6 @@
   >
   </trigger>
   <trigger
-   enabled="y"
    group="huashan_fight"
    match="^(Ëû|Ëý)×°±¸×Å£º$"
    name="huashan_fight6"
@@ -1350,6 +1872,26 @@
   >
   </trigger>
   <trigger
+   group="jqgzlin"
+   match="^&gt;*\s*Äã°Ñ &quot;action&quot; Éè¶¨Îª &quot;Àë¿ªÖñÁÖÁËÂð&quot; ³É¹¦Íê³É¡£"
+   name="jqgzlin1"
+   regexp="y"
+   script="jqgzlin_goon"
+   sequence="100"
+   variable="jqgzlin1"
+  >
+  </trigger>
+  <trigger
+   group="jqgzlout"
+   match="^&gt;*\s*Äã°Ñ &quot;action&quot; Éè¶¨Îª &quot;Àë¿ªÖñÁÖÁËÂð&quot; ³É¹¦Íê³É¡£"
+   name="jqgzlout1"
+   regexp="y"
+   script="jqgzlout_goon"
+   sequence="100"
+   variable="jqgzlout1"
+  >
+  </trigger>
+  <trigger
    enabled="y"
    group="job_exp"
    match="^&gt;*\s*Äã±»½±ÀøÁË(\D*)µã¾­Ñé£¬(\D*)µãÇ±ÄÜ£¬(\D*)µã¸ºÉñ£¡$"
@@ -1402,6 +1944,26 @@
   >
   </trigger>
   <trigger
+   group="jqgin"
+   match="^&gt;*\s*ÄãÒª¿´Ê²Ã´£¿"
+   name="jqgin1"
+   regexp="y"
+   script="jqgin_look"
+   sequence="100"
+   variable="jqgin1"
+  >
+  </trigger>
+  <trigger
+   group="qqs"
+   match="^&gt;*\s*ÄãÒªÍùÄÄÀïÇ±£¿$"
+   name="qqs3"
+   regexp="y"
+   script="hhqover"
+   sequence="100"
+   variable="qqs3"
+  >
+  </trigger>
+  <trigger
    enabled="y"
    group="hp"
    match="^&gt;*\s*ÄãÖÁÉÙÐèÒª(\D*)µãµÄÆøÀ´´ò×ø£¡"
@@ -1410,6 +1972,36 @@
    script="hp_dazuo_check"
    sequence="100"
    variable="hp8"
+  >
+  </trigger>
+  <trigger
+   group="jqgin"
+   match="^&gt;*\s*Ò»Ò¶Ð¡ÖÛ£¬Æ®Æ®ºöºöµØËæ×ÅÏªÁ÷¶ø»ÎÀ´»ÎÈ¥¡£"
+   name="jqgin2"
+   regexp="y"
+   script="jqgin_jump"
+   sequence="100"
+   variable="jqgin2"
+  >
+  </trigger>
+  <trigger
+   group="jqgout"
+   match="^&gt;*\s*ÓÖ»®³öÈýËÄÀï£¬ÏªÁ÷ÇúÕÛ£¬Ð¡ÖÛ¾­»®¹ýÁË¼¸¸öÍäºóÓÖ»Øµ½Ïª±ß¡£"
+   name="jqgout2"
+   regexp="y"
+   script="jqgout_out"
+   sequence="100"
+   variable="jqgout2"
+  >
+  </trigger>
+  <trigger
+   group="jqgin"
+   match="^&gt;*\s*ÓÖ»®³öÈýËÄÀï£¬ÏªÐÄºöÓÐ¾Å¿é´óÊ¯Ó­ÃæËÊÁ¢£¬ÓÌÈçÆÁ·çÒ»°ã£¬µ²×¡ÁËÀ´´¬È¥Â·¡£"
+   name="jqgin3"
+   regexp="y"
+   script="jqgin_out"
+   sequence="100"
+   variable="jqgin3"
   >
   </trigger>
   <trigger
@@ -1441,6 +2033,26 @@
    script="checkRefresh"
    sequence="100"
    variable="hp14"
+  >
+  </trigger>
+  <trigger
+   group="sslcheck"
+   match="^\D*Ê¯ÎÝ"
+   name="sslcheck1"
+   regexp="y"
+   script="hsssl_out"
+   sequence="100"
+   variable="sslcheck1"
+  >
+  </trigger>
+  <trigger
+   group="xin_check"
+   match="^\s*Ò»·âÐÅ¼þ\(Letter\)"
+   name="xin_check1"
+   regexp="y"
+   script="mail_check"
+   sequence="100"
+   variable="xin_check1"
   >
   </trigger>
   <trigger
@@ -1663,6 +2275,27 @@
   >
   </trigger>
   <trigger
+   group="hqgzcCaiPuCheck"
+   match="^Äã»¹ÓÐÏÂÁÐÔ­ÁÏÉÐÎ´ÕÒµ½£º"
+   name="hqgzcCaiPuCheck1"
+   regexp="y"
+   script="hqgzcCaiPuDetail"
+   sequence="100"
+   variable="hqgzcCaiPuCheck1"
+  >
+  </trigger>
+  <trigger
+   group="hqgzcCaiPuDetail"
+   match="^ÄãÒÑ¾­ÕÒµ½µÄÔ­ÁÏÓÐ£º\D*"
+   name="hqgzcCaiPuDetail2"
+   regexp="y"
+   script="hqgzcWhereConsider"
+   sequence="100"
+   variable="hqgzcCaiPuDetail2"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
    match="^Äú²ÎÓëÓÎÏ·µÄÖ÷»ú±±¾©Ê±¼äÊÇ\s*ÐÇÆÚ(\D*)\s*\d*-\D*-\s*\d*\s*(\d*):(\d*):"
    name="server_time"
    regexp="y"
@@ -1715,7 +2348,7 @@
   </trigger>
   <trigger
    group="huashan_find"
-   match="¿´ÆðÀ´·¶¼×ÓðÏëÉ±ËÀÄã£¡"
+   match="¿´ÆðÀ´°½Ñ§ÓÑÏëÉ±ËÀÄã£¡"
    name="huashan_find2"
    regexp="y"
    script="huashan_debug_fight"
@@ -1741,7 +2374,7 @@
 <aliases
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-04 23:46:21"
+   date_saved="2020-06-10 11:55:02"
   >
   <alias
    name="dushu"
@@ -2054,7 +2687,7 @@
    regexp="y"
    sequence="100"
   >
-  <send>alias pppp1 get fengyun sword;get taiji sword;unwield xiao;unwield taiji sword;wield fengyun sword;bei none;jifa strike luoying-zhang;jifa parry luoying-zhang;uweapon shape fengyun strike;bei strike;jiali max;perform leg.fengwu;perform hand.shuang;perform strike.pikong;perform sword.yuxiao;perform finger.huayu;jiali 1 jing qing</send>
+  <send>alias pppp1 get fengyun sword;get taiji sword;unwield xiao;unwield taiji sword;wield fengyun sword;bei none;jifa hand lanhua-shou;jifa parry lanhua-shou;uweapon shape fengyun hand;bei hand;jiali max;perform leg.fengwu;perform hand.shuang;perform strike.pikong;perform sword.yuxiao;perform finger.huayu;jiali 1 ao xueyou</send>
   </alias>
   <alias
    name="kjh"
@@ -2111,7 +2744,7 @@
    regexp="y"
    sequence="100"
   >
-  <send>alias mypfm perform strike.pikong mjfhb</send>
+  <send>alias mypfm perform strike.pikong observec</send>
   </alias>
   <alias
    match="opendoor"
@@ -2498,7 +3131,7 @@
    regexp="y"
    sequence="100"
   >
-  <send>alias sxlian bei none;unwield taiji sword;unwield wuji xiao;uweapon shape fengyun sword;unwield fengyun sword;jifa sword jinshe-jianfa;wield taiji sword;lian sword 30;unwield taiji sword;yun jingli;jifa finger tanzhi-shentong;lian finger 10;yun jingli;jifa sword yuxiao-jian;wield wuji xiao;lian sword 10;unwield wuji xiao;yun jingli;jifa leg xuanfeng-tui;lian leg 10;yun jingli;jifa dodge suibo-zhuliu;lian dodge 10;yun jingli;jifa strike jinshe-zhangfa;lian strike 10;yun jingli;jifa cuff taizu-quan;lian cuff 10;yun jingli;jifa strike luoying-zhang;lian strike 10;yun jingli;jifa hand lanhua-shou;lian hand 10;yun jingli;bei cuff;hp;unset »ýÐî</send>
+  <send>alias sxlian bei none;unwield taiji sword;unwield wuji xiao;uweapon shape fengyun sword;unwield fengyun sword;jifa sword jinshe-jianfa;wield taiji sword;lian sword 30;unwield taiji sword;yun jingli;jifa finger tanzhi-shentong;lian finger 10;yun jingli;lian force 10;jifa sword yuxiao-jian;wield wuji xiao;lian sword 10;unwield wuji xiao;yun jingli;jifa leg xuanfeng-tui;lian leg 10;yun jingli;jifa dodge suibo-zhuliu;lian dodge 10;yun jingli;jifa strike jinshe-zhangfa;lian strike 10;yun jingli;jifa cuff taizu-quan;lian cuff 10;yun jingli;jifa strike luoying-zhang;lian strike 10;yun jingli;jifa hand lanhua-shou;lian hand 10;yun jingli;bei cuff;hp;unset »ýÐî</send>
   </alias>
   <alias
    match="sxsb"
@@ -2727,9 +3360,21 @@
 <timers
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-04 23:46:21"
+   date_saved="2020-06-10 11:55:02"
   >
+  <timer name="walkWait" script="walk_goon" second="0.10" offset_second="0.00" active_closed="y" >
+
+  </timer>
   <timer name="idle" script="idle_set" enabled="y" second="30.00" offset_second="0.00" active_closed="y" >
+
+  </timer>
+  <timer name="boat" script="boatCheck" enabled="y" second="20.00" offset_second="0.00" active_closed="y" >
+
+  </timer>
+  <timer name="halt" script="halt_timer_set" second="0.40" offset_second="0.00" active_closed="y" >
+
+  </timer>
+  <timer name="bei" script="bei_timer_set" second="0.40" offset_second="0.00" active_closed="y" >
 
   </timer>
 </timers>
@@ -2739,7 +3384,7 @@
 <macros
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-04 23:46:21"
+   date_saved="2020-06-10 11:55:02"
   >
 
   <macro name="up" type="send_now" >
@@ -2833,7 +3478,7 @@
 <variables
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-04 23:46:21"
+   date_saved="2020-06-10 11:55:02"
   >
   <variable name="autoGetJinHe">1</variable>
   <variable name="caishen_location">»ªÉ½´å²ËµØ</variable>
@@ -2843,7 +3488,7 @@
   <variable name="dmlNewDecreaseLvl">20</variable>
   <variable name="dmlNewIncreaseLvl">50</variable>
   <variable name="dmlPkFlag">notReady</variable>
-  <variable name="dml_cur_date">20200604</variable>
+  <variable name="dml_cur_date">20200610</variable>
   <variable name="do_lost_again">0</variable>
   <variable name="drugprepare">²õÍÉ½ð´¯Ò©|»ÆÜÎÄÚÏ¢µ¤|Å£Æ¤¾Æ´ü|»ðÕÛ</variable>
   <variable name="dsjl">\D*ºüÒÉµØ¿´×ÅÄã£º¡¸ÕâÐÅÔõÃ´Âäµ½ÄãµÄÊÖÉÏ£¿¡¹|\D*ÉÏÏÂ´òÁ¿ÁËÄãÁ½ÑÛ£º¡¸Äãµ±ÕæÃ»ÓÐÍµ²ðÀ´¿´¹ý£¿\D*¿ÉÊÇÓÐÒþË½È¨µÄ¡£¡¹|\D*×ÔÑÔ×ÔÓïµÀ£º¡°Õâ¸öÄêÍ·¶ù°¡£¬ÊÀÉÏÊ²Ã´»µÈË¶¼ÓÐ£¬¼Ù°çÁËºÍÉÐµÀÊ¿£¬±ãÏëÀ´»¯ÔµÆ­ÈË¡£\D*ÎÒÊ²Ã´Ã»¼û¹ý£¬²Å²»ÉÏÕâ¸öµ±ÄØ¡£¡±|\D*Ô½ÏëÔ½ÉúÆø£¬±©´òÁËÄãÒ»¶Ù£¬´òµÃÄã±éÌåÁÛÉË¡£|Äã±»\D*´ò³ÉÖØÉË£¬¾­ÑéÏÂ½µÁË\D*µã¡£|ÄãÒò±»ÈË±©×á¶ø³öÃû£¬½­ºþÉùÍûÔö¼ÓÁË\D*µã¡£|Äã¸Ð¾õ×Ô¼ºÊÜ¾¡ÁËÎ¯Çü£¬ÎØÎØµØ¿ÞÁËÆðÀ´¡£|¡¾Ò¥ÑÔ¡¿Ä³ÈË£º¾ÝËµ\D*±»\D*´òÉµÁË!|Äã»ñµÃÁË¶þµã½­ºþÉùÍû¡£|×òÌìÍê³ÉÊ§ÂäÐÅ¼ãÈÎÎñ£º\S*´Î£¬½ñÌìÍê³ÉÊ§ÂäÐÅ¼ãÈÎÎñ£º\S*/\S*´Î¡£|Äã½ñÌìÒÑ¾­Ê¹ÓÃ\S*´ÎÐÅÊ¹Ö®Ö¤£¬Äã±¾ÖÜ¹²Ê¹ÓÃ\S*´ÎÐÅÊ¹Ö®Ö¤¡£</variable>
@@ -2860,8 +3505,8 @@
   <variable name="id">pumkmai</variable>
   <variable name="jin_chai">1</variable>
   <variable name="job_finish_ll">0</variable>
-  <variable name="job_hqg_date">202006040653</variable>
-  <variable name="job_hqg_finish_date">20200604</variable>
+  <variable name="job_hqg_date">202006100648</variable>
+  <variable name="job_hqg_finish_date">20200610</variable>
   <variable name="job_hqg_max_times">100</variable>
   <variable name="job_hqg_times">0</variable>
   <variable name="job_hqg_toggle">1</variable>
@@ -2884,8 +3529,8 @@
   <variable name="mw_beinang_windowy">17</variable>
   <variable name="mw_skills_windowflags">2</variable>
   <variable name="mw_skills_windowmode">0</variable>
-  <variable name="mw_skills_windowx">0</variable>
-  <variable name="mw_skills_windowy">0</variable>
+  <variable name="mw_skills_windowx">414</variable>
+  <variable name="mw_skills_windowy">8</variable>
   <variable name="mybuff">perform hand.shuang</variable>
   <variable name="mycishu">10</variable>
   <variable name="mycishu_jsjf">30</variable>
@@ -2980,7 +3625,7 @@
 <colours
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-04 23:46:21"
+   date_saved="2020-06-10 11:55:02"
   >
 
 <ansi>
@@ -3037,7 +3682,7 @@
 <keypad
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-04 23:46:21"
+   date_saved="2020-06-10 11:55:02"
   >
 
   <key name="0" >
@@ -3151,7 +3796,7 @@
 <printing
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-04 23:46:21"
+   date_saved="2020-06-10 11:55:02"
   >
 
 <ansi>
