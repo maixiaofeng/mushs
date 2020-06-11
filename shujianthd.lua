@@ -2818,7 +2818,14 @@ function checkJob()
 	    locate(coroutine.running())
 		coroutine.yield()
 		if locl.weekday=='四' and locl.hour==7 and locl.min>=58 then 
+		    --明悟清零
+			SetVariable('worship_done','0')
 	        return reboot_prepare()
+		elseif locl.weekday=='三' and locl.hour==11 and locl.min>=15 and locl.min<=30 then 
+		    local worship_done = tonumber(GetVariable('worship_done'))
+			if worship_done == 0 then
+                return auto_worship_laoren()     			
+			end
 	    elseif use_wxb_sq == 1 then
 		     checkBags(coroutine.running())
 		     coroutine.yield()
@@ -7471,6 +7478,20 @@ function reboot_prepare()
 		coroutine.yield()
 	end)
 end
+
+---- 每周三中午12点 自动worship lao ren  -------------------
+---- 领取成功后，写入到变量或者文件里
+function auto_worship_laoren()
+    wait.make(function()
+	    await_go('泰山','记忆之间')
+		wait_busy()
+		exe('worship lao ren')
+		wait_busy()
+		SetVariable('worship_done','1')
+		return checkJob_ex()
+	end)
+end
+
 
 
 

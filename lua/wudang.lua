@@ -1197,7 +1197,7 @@ function wdkill_npc()
 	kezhiwugongAddTarget(job.target,job.id)
 end
 function wudangBack(n,l,w)
-   print('wudangBack..........')
+   print('wudangBack..........:'..w[2])
    --[[EnableTriggerGroup("wipe",false) 
    EnableTriggerGroup("wudangFind_MayBeLost",false)
     wdgostart=0
