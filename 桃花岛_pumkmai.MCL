@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE muclient>
-<!-- Saved on 2020Äê ÁùÔÂ 12ÈÕ ÐÇÆÚÎå, ÉÏÎç 7:08 -->
+<!-- Saved on 2020Äê ÁùÔÂ 13ÈÕ ÐÇÆÚÁù, ÉÏÎç 11:23 -->
 <!-- MuClient version 4.84 -->
 <!-- Written by Nick Gammon -->
 <!-- Home Page: http://www.mushclient.com/ -->
@@ -8,7 +8,7 @@
 <world
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-12 07:08:37"
+   date_saved="2020-06-13 11:23:33"
 
    auto_say_override_prefix="-"
    auto_say_string="say "
@@ -115,7 +115,7 @@
 <triggers
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-12 07:08:37"
+   date_saved="2020-06-13 11:23:33"
   >
   <trigger
    enabled="y"
@@ -223,36 +223,6 @@
   >
   </trigger>
   <trigger
-   group="wudangFight"
-   match="^(&gt; )*(\D*)¡¸Å¾¡¹µÄÒ»Éùµ¹ÔÚµØÉÏ"
-   name="wudangFight1"
-   regexp="y"
-   script="wudangBack"
-   sequence="100"
-   variable="wudangFight1"
-  >
-  </trigger>
-  <trigger
-   group="wudangFight"
-   match="^(&gt; )*(\D*)´óº°Ò»Éù£º²»ºÃ£¡£¡×ªÉí¼¸¸öÆðÂä¾Í²»¼ûÁË"
-   name="wudangFight2"
-   regexp="y"
-   script="wudangBack"
-   sequence="100"
-   variable="wudangFight2"
-  >
-  </trigger>
-  <trigger
-   group="wudangFight"
-   match="^(&gt; )*(\D*)´óº°Ò»Éù£ºÀÏ×Ó²»·îÅãÁË£¡×ªÉí¼¸¸öÆðÂä¾Í²»¼ûÁË"
-   name="wudangFight5"
-   regexp="y"
-   script="wudangBack"
-   sequence="100"
-   variable="wudangFight5"
-  >
-  </trigger>
-  <trigger
    enabled="y"
    group="job_exp"
    match="^(&gt; )*(\D*)µã¾­Ñé!$"
@@ -272,16 +242,6 @@
    script="jobExppot"
    sequence="100"
    variable="job_exp1"
-  >
-  </trigger>
-  <trigger
-   group="wudangFight"
-   match="^(&gt; )*(\D*)¶Ô×ÅÄã·¢³öÒ»ÕóÒõÐ¦£¬ËµµÀ"
-   name="wudangFight4"
-   regexp="y"
-   script="wudangKillAct"
-   sequence="100"
-   variable="wudangFight4"
   >
   </trigger>
   <trigger
@@ -359,16 +319,6 @@
    script="eatdan"
    sequence="100"
    variable="hp30"
-  >
-  </trigger>
-  <trigger
-   group="check_bei"
-   match="^(&gt; )*(ÄãÏÖÔÚÒÑ¾­×éºÏ|ÄãÒÑ×¼±¸ÓÐÒ»ÖÖ¼¼ÄÜÁË|ÄãÖÁÉÙ²»»áÕâÁ½ÖÖÈ­½Å¼¼ÄÜµÄÆäÖÐÖ®Ò»|ÄãÏÖÔÚÒÑ¾­×¼±¸ºÃÌØÊâ¼¼ÄÜÁË)"
-   name="check_bei1"
-   regexp="y"
-   script="beiok"
-   sequence="100"
-   variable="check_bei1"
   >
   </trigger>
   <trigger
@@ -504,6 +454,16 @@
   >
   </trigger>
   <trigger
+   group="huashan_egg"
+   match="^(&gt; )*\s*(\D*)\s*-\s*(north|east|south|west|northup|eastup|southup|westup|northdown|eastdown|southdown|westdown|northeast|southeast|northwest|southwest|enter|out)"
+   name="huashan_egg1"
+   regexp="y"
+   script="huashan_egg_ss"
+   sequence="100"
+   variable="huashan_egg1"
+  >
+  </trigger>
+  <trigger
    enabled="y"
    group="hp"
    match="^(&gt; )*°¢·Ê\(Imgxx\)¸æËßÄã£ºstop!!!"
@@ -558,6 +518,16 @@
   >
   </trigger>
   <trigger
+   group="huashan_getnpc"
+   match="^(&gt; )*¹âÌì»¯ÈÕµÄÏëÇÀ½Ù°¡"
+   name="huashan_getnpc3"
+   regexp="y"
+   script="huashan_getagain"
+   sequence="100"
+   variable="huashan_getnpc3"
+  >
+  </trigger>
+  <trigger
    enabled="y"
    group="job_exp"
    match="^(&gt; )*ºÃ£¡ÈÎÎñÍê³É£¬Äã±»½±ÀøÁË£º(\D*)µãÊµÕ½¾­Ñé£¬(\D*)µãÇ±ÄÜ¡£(\D*)Éñ¡£$"
@@ -588,17 +558,6 @@
    script="fightXiqi"
    sequence="100"
    variable="fight11"
-  >
-  </trigger>
-  <trigger
-   enabled="y"
-   group="wudangdebug"
-   match="^(&gt; )*¿´À´¸ÃÕÒ»ú»áÌÓÅÜÁË"
-   name="wudangdebug1"
-   regexp="y"
-   script="wudangdebugFind"
-   sequence="100"
-   variable="wudangdebug1"
   >
   </trigger>
   <trigger
@@ -690,7 +649,26 @@
   >
   </trigger>
   <trigger
-   enabled="y"
+   group="checkwait"
+   match="^(&gt; )*Äã°Ñ &quot;action&quot; Éè¶¨Îª &quot;µÈ´ýÒ»ÏÂ&quot; ³É¹¦Íê³É¡£$"
+   name="checkwait1"
+   regexp="y"
+   script="checkWaitOk"
+   sequence="100"
+   variable="checkwait1"
+  >
+  </trigger>
+  <trigger
+   group="checknext"
+   match="^(&gt; )*Äã°Ñ &quot;action&quot; Éè¶¨Îª &quot;¼ÌÐøÇ°½ø&quot; ³É¹¦Íê³É¡£$"
+   name="checknext1"
+   regexp="y"
+   script="checkNextOk"
+   sequence="100"
+   variable="checknext1"
+  >
+  </trigger>
+  <trigger
    group="walk"
    match="^(&gt; )*Äã°Ñ &quot;action&quot; Éè¶¨Îª &quot;ÕýÔÚ¸ÏÂ·ÖÐ&quot; ³É¹¦Íê³É¡£$"
    name="walk1"
@@ -734,6 +712,16 @@
   >
   </trigger>
   <trigger
+   group="huashan_getnpc"
+   match="^(&gt; )*Äã´Ó(\D*)µÄÊ¬ÌåÉíÉÏËÑ³öÒ»¿éÁîÅÆ¡£"
+   name="huashan_getnpc1"
+   regexp="y"
+   script="huashan_backgogo"
+   sequence="100"
+   variable="huashan_getnpc1"
+  >
+  </trigger>
+  <trigger
    enabled="y"
    group="hp"
    match="^(&gt; )*ÄãµÃµ½ÁËÒ»·âÊ§ÂäµÄÐÅ¼ã¡£"
@@ -764,6 +752,16 @@
    script="UseKuangfeng"
    sequence="100"
    variable="fight22"
+  >
+  </trigger>
+  <trigger
+   group="huashan_over"
+   match="^(&gt; )*Äã¸øÔÀ²»ÈºÒ»¿éÁîÅÆ¡£"
+   name="huashan_over1"
+   regexp="y"
+   script="huashan_finish"
+   sequence="100"
+   variable="huashan_over1"
   >
   </trigger>
   <trigger
@@ -822,6 +820,16 @@
   >
   </trigger>
   <trigger
+   group="huashan_getnpc"
+   match="^(&gt; )*Äã½«(\D*)µÄÊ¬Ìå·öÁËÆðÀ´±³ÔÚ±³ÉÏ¡£"
+   name="huashan_getnpc2"
+   regexp="y"
+   script="huashan_get_corpse_test"
+   sequence="100"
+   variable="huashan_getnpc2"
+  >
+  </trigger>
+  <trigger
    enabled="y"
    group="job_exp"
    match="^(&gt; )*Äã¾²ÏÂÐÄÀ´£¬·´¸´»ØÏë¸Õ²ÅµÄÈÎÎñ¹ý³Ì£¬²»½û»íÈ»¿ªÀÊ¡£¡£Äã¶îÍâµØµÃµ½ÁË(\D*)µã¾­Ñé£¡"
@@ -851,16 +859,6 @@
    script="fpk1"
    sequence="100"
    variable="pk2"
-  >
-  </trigger>
-  <trigger
-   group="wudangAsk"
-   match="^(&gt; )*ÄãÏòËÎÔ¶ÇÅ´òÌýÓÐ¹Ø"
-   name="wudangAsk1"
-   regexp="y"
-   script="wudangAsk"
-   sequence="100"
-   variable="wudangAsk1"
   >
   </trigger>
   <trigger
@@ -964,126 +962,6 @@
   >
   </trigger>
   <trigger
-   group="wudangAccept"
-   match="^(&gt; )*ËÎÔ¶ÇÅ\D*Äã¿ìÈ¥¿ì»Ø£¬Ò»ÇÐÐ¡ÐÄ°¡¡£"
-   name="wudangAcceptb"
-   regexp="y"
-   script="wudangFindGo"
-   sequence="100"
-   variable="wudangAcceptb"
-  >
-  </trigger>
-  <trigger
-   group="wudangFinish"
-   match="^(&gt; )*ËÎÔ¶ÇÅ±»ÄãÆøµÃ»èÁË¹ýÈ¥¡£"
-   name="wudangFinish2"
-   regexp="y"
-   script="wudangFinish"
-   sequence="100"
-   variable="wudangFinish2"
-  >
-  </trigger>
-  <trigger
-   group="wudangFinish"
-   match="^(&gt; )*ËÎÔ¶ÇÅ¶Ô×ÅÄãÊúÆðÁËÓÒÊÖ´óÄ´Ö¸£¬ºÃÑùµÄ¡£"
-   name="wudangFinish1"
-   regexp="y"
-   script="wudangFinishT"
-   sequence="100"
-   variable="wudangFinish1"
-  >
-  </trigger>
-  <trigger
-   group="wudangAccept"
-   match="^(&gt; )*ËÎÔ¶ÇÅËµµÀ£º¡¸\D*£¬ÄãÌ«ÈÃÎÒÊ§ÍûÁË£¬¾ÓÈ»ÕâÃ´µã»î¶¼¸É²»ºÃ£¬ÏÈÍËÏÂ°É"
-   name="wudangAccept8"
-   regexp="y"
-   script="wudangFail"
-   sequence="100"
-   variable="wudangAccept8"
-  >
-  </trigger>
-  <trigger
-   group="wudangAccept"
-   match="^(&gt; )*ËÎÔ¶ÇÅËµµÀ£º¡¸\D*£¬ÄãÓÖÃ»ÔÚÎÒÕâÀïÁìÈÎÎñ£¬Ï¹·ÅÆúÊ²Ã´Ñ½"
-   name="wudangAccept9"
-   regexp="y"
-   script="wudangFail"
-   sequence="100"
-   variable="wudangAccept9"
-  >
-  </trigger>
-  <trigger
-   group="wudangAccept"
-   match="^(&gt; )*ËÎÔ¶ÇÅËµµÀ£º¡¸\D*£¬Õâ¸öÈÎÎñÈ·Êµ±È½ÏÄÑÍê³É£¬ÏÂ´Î¸øÄã¼òµ¥µÄ£¬ÏÈÍËÏÂ°É£¡"
-   name="wudangAccept10"
-   regexp="y"
-   script="wudangFail"
-   sequence="100"
-   variable="wudangAccept10"
-  >
-  </trigger>
-  <trigger
-   group="wudangFinish"
-   match="^(&gt; )*ËÎÔ¶ÇÅËµµÀ£º¡¸ÄÏº£öù°ÔÄãÔõÃ´¸ãµÄ"
-   name="wudangFinish3"
-   regexp="y"
-   script="wudangFinish"
-   sequence="100"
-   variable="wudangFinish3"
-  >
-  </trigger>
-  <trigger
-   group="wudangAccept"
-   match="^(&gt; )*ËÎÔ¶ÇÅËµµÀ£º¡¸Äã¸Õ×öÍê(Îäµ±³ú¼é|³Í¶ñÑïÉÆ|´óÀíËÍÐÅ|¿¹µÐËÌÄ¦ÑÂ)ÈÎÎñ"
-   name="wudangAccept5"
-   regexp="y"
-   script="wudangFail"
-   sequence="100"
-   variable="wudangAccept5"
-  >
-  </trigger>
-  <trigger
-   group="wudangAccept"
-   match="^(&gt; )*ËÎÔ¶ÇÅËµµÀ£º¡¸ÄãÕýÃ¦×Å±ðµÄÊÂÇéÄØ"
-   name="wudangAccept4"
-   regexp="y"
-   script="wudangFail"
-   sequence="100"
-   variable="wudangAccept4"
-  >
-  </trigger>
-  <trigger
-   group="wudangAccept"
-   match="^(&gt; )*ËÎÔ¶ÇÅËµµÀ£º¡¸ÎÒ²»ÊÇ¸æËßÄãÁËÂð£¬ÓÐÈËÔÚ"
-   name="wudangAccept2"
-   regexp="y"
-   script="wudangFangqi"
-   sequence="100"
-   variable="wudangAccept2"
-  >
-  </trigger>
-  <trigger
-   group="wudangAccept"
-   match="^(&gt; )*ËÎÔ¶ÇÅËµµÀ£º¡¸ÏÖÔÚÔÝÊ±Ã»ÓÐÊÊºÏÄãµÄ¹¤×÷"
-   name="wudangAccept6"
-   regexp="y"
-   script="wudangFail"
-   sequence="100"
-   variable="wudangAccept6"
-  >
-  </trigger>
-  <trigger
-   group="wudangAccept"
-   match="^(&gt; )*ËÎÔ¶ÇÅËµµÀ£º¡¸ÔÝÊ±Ã»ÓÐÈÎÎñÐèÒª×ö£¬Äã¹ýÒ»»á¶ùÔÙÀ´°É"
-   name="wudangAccept7"
-   regexp="y"
-   script="wudangFail"
-   sequence="100"
-   variable="wudangAccept7"
-  >
-  </trigger>
-  <trigger
    enabled="y"
    group="job_exp"
    match="^(&gt; )*ËÎÔ¶ÇÅÎªÄãÔÚÇ®×¯Àï´æÈë(\D*)¶§»Æ½ð¡£"
@@ -1092,46 +970,6 @@
    script="job_gold_wudang"
    sequence="100"
    variable="job_exp19"
-  >
-  </trigger>
-  <trigger
-   group="wudangAccept"
-   match="^(&gt; )*ËÎÔ¶ÇÅÔÚÄãµÄ¶ú±ßÇÄÉùËµµÀ(\D*)ÓÈÎªÉÃ³¤(\D*)µÄ¹¦·ò¡£"
-   name="wudangAccept3"
-   regexp="y"
-   script="wudangNpc"
-   sequence="100"
-   variable="wudangAccept3"
-  >
-  </trigger>
-  <trigger
-   group="wudangAccept"
-   match="^(&gt; )*ËÎÔ¶ÇÅÔÚÄãµÄ¶ú±ßÇÄÉùËµµÀ£º´ËÈËµÄÎä¹¦(\D*)£¬"
-   name="wudangAccepta"
-   regexp="y"
-   script="wudanglevel"
-   sequence="100"
-   variable="wudangAccepta"
-  >
-  </trigger>
-  <trigger
-   group="wudangAccept"
-   match="^(&gt; )*ËÎÔ¶ÇÅÔÚÄãµÄ¶ú±ßÇÄÉùËµµÀ£º¾ÝËµ(½­ÄÏ|½­±±|Î÷ÄÏ|ÖÐÔ­|Î÷±±|ºÓÄÏ|ºÓ±±|¶«±±)(²Ý¿Ü|Õ¯Ö÷|¶ñ°Ô|É½Ôô|ÍÁ·Ë|·ÉÔô|µÁÔô)(\D*)ÕýÔÚ(\D*)µ·ÂÒ"
-   name="wudangAccept1"
-   regexp="y"
-   script="wudangConsider"
-   sequence="100"
-   variable="wudangAccept1"
-  >
-  </trigger>
-  <trigger
-   group="wudangAccept"
-   match="^(&gt; )*ËÎÔ¶ÇÅÔÚÄãµÄ¶ú±ßÇÄÉùËµµÀ£ºÀÏÍ·×ÓÒÑ×·²éµ½(\D*)ÊÇÎÒÎäµ±³öÉí£¬ÓÈÎªÉÃ³¤(\D*)µÄ¹¦·ò¡£"
-   name="wudangAccept31"
-   regexp="y"
-   script="wudangNpc"
-   sequence="100"
-   variable="wudangAccept31"
   >
   </trigger>
   <trigger
@@ -1178,16 +1016,6 @@
   >
   </trigger>
   <trigger
-   group="wudangAsk"
-   match="^(&gt; )*ÕâÀïÃ»ÓÐÕâ¸öÈË¡£$"
-   name="wudangAsk2"
-   regexp="y"
-   script="wudangNobody"
-   sequence="100"
-   variable="wudangAsk2"
-  >
-  </trigger>
-  <trigger
    enabled="y"
    group="fight"
    match="^(\D*)ÑÛ»¨çÔÂÒ£¬±»¹¥ÁË¸ö´ëÊÖ²»¼°£¡"
@@ -1221,23 +1049,43 @@
   >
   </trigger>
   <trigger
-   group="wudangFight"
-   match="^(Ëû|Ëý)´©´÷×Å£º$"
-   name="wudangFight8"
+   group="wipe"
+   match="^&gt;*\s*(\D*)¡¸Å¾¡¹µÄÒ»Éùµ¹ÔÚµØÉÏ£¬ÕõÔú×Å³é¶¯ÁË¼¸ÏÂ¾ÍËÀÁË"
+   name="wipe2"
    regexp="y"
-   script="npcWeapon"
+   script="wipe_goon"
    sequence="100"
-   variable="wudangFight8"
+   variable="wipe2"
   >
   </trigger>
   <trigger
-   group="wudangFight"
-   match="^(Ëû|Ëý)×°±¸×Å£º$"
-   name="wudangFight7"
+   group="wipe"
+   match="^&gt;*\s*(\D*)Éí×Ó¶¯ÁË¶¯£¬¿ÚÖÐÉëÒ÷ÁË¼¸Éù£¬ÇåÐÑ¹ýÀ´"
+   name="wipe7"
    regexp="y"
-   script="npcWeapon"
+   script="wipe_wake"
    sequence="100"
-   variable="wudangFight7"
+   variable="wipe7"
+  >
+  </trigger>
+  <trigger
+   group="wipe"
+   match="^&gt;*\s*(\D*)ÉñÖ¾ÃÔºý£¬½ÅÏÂÒ»¸ö²»ÎÈ£¬µ¹ÔÚµØÉÏ»èÁË¹ýÈ¥"
+   name="wipe3"
+   regexp="y"
+   script="wipe_faint"
+   sequence="100"
+   variable="wipe3"
+  >
+  </trigger>
+  <trigger
+   group="wipe"
+   match="^&gt;*\s*(\D*)Íù\D*Âä»Ä¶øÌÓÁË¡£$"
+   name="wipe1"
+   regexp="y"
+   script="wipe_goon"
+   sequence="100"
+   variable="wipe1"
   >
   </trigger>
   <trigger
@@ -1284,6 +1132,16 @@
   >
   </trigger>
   <trigger
+   group="wipe"
+   match="^&gt;*\s*Äã¶Ô×Å(\D*)(ÃÍºð|´óºÈ|ºðµÀ|ºÈµÀ|ßýÁËÒ»¿Ú)"
+   name="wipe4"
+   regexp="y"
+   script="wipe_who"
+   sequence="100"
+   variable="wipe4"
+  >
+  </trigger>
+  <trigger
    enabled="y"
    group="job_exp"
    match="^&gt;*\s*Äã¾õµÃÄÔÖÐ»íÈ»¿ªÀÊ£¬Ôö¼ÓÁË(\D*)µãÇ±ÄÜºÍ(\D*)µã¾­Ñé£¡"
@@ -1305,6 +1163,16 @@
   >
   </trigger>
   <trigger
+   group="wipe"
+   match="^&gt;*\s*ÄãÒª¶ÔË­×öÕâ¸ö¶¯×÷£¿"
+   name="wipe6"
+   regexp="y"
+   script="wipe_over"
+   sequence="100"
+   variable="wipe6"
+  >
+  </trigger>
+  <trigger
    enabled="y"
    group="hp"
    match="^&gt;*\s*ÄãÖÁÉÙÐèÒª(\D*)µãµÄÆøÀ´´ò×ø£¡"
@@ -1316,13 +1184,13 @@
   >
   </trigger>
   <trigger
-   group="wudangFight"
-   match="^&gt;*\s*Ò»¹ÉÅ¯Á÷·¢×Ôµ¤ÌïÁ÷ÏòÈ«Éí£¬ÂýÂýµØÄãÓÖ»Ö¸´ÁËÖª¾õ¡­¡­"
-   name="wudangFight6"
+   group="wipe"
+   match="^&gt;*\s*ÕâÀïÃ»ÓÐÕâ¸öÈË¡£"
+   name="wipe5"
    regexp="y"
-   script="wudangFangqiGo"
+   script="wipe_over"
    sequence="100"
-   variable="wudangFight6"
+   variable="wipe5"
   >
   </trigger>
   <trigger
@@ -1347,13 +1215,13 @@
   >
   </trigger>
   <trigger
-   group="xin_check"
-   match="^\s*Ò»·âÐÅ¼þ\(Letter\)"
-   name="xin_check1"
+   group="sslcheck"
+   match="^\D*Ê¯ÎÝ"
+   name="sslcheck1"
    regexp="y"
-   script="mail_check"
+   script="hsssl_out"
    sequence="100"
-   variable="xin_check1"
+   variable="sslcheck1"
   >
   </trigger>
   <trigger
@@ -1368,7 +1236,6 @@
   >
   </trigger>
   <trigger
-   enabled="y"
    group="hpheqi"
    match="^¡¤ºÏÆø¶È¡¤\s*\-?\s*(\d*)"
    name="hpheqi1"
@@ -1618,7 +1485,16 @@
   >
   </trigger>
   <trigger
-   enabled="y"
+   group="huashan_egg"
+   match="½ðµ°\(Gold"
+   name="huashan_egg2"
+   regexp="y"
+   script="huashan_egg_find"
+   sequence="100"
+   variable="huashan_egg2"
+  >
+  </trigger>
+  <trigger
    group="hp"
    match="^(&gt; )*(\D*)"
    name="hp12"
@@ -1636,7 +1512,7 @@
 <aliases
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-12 07:08:37"
+   date_saved="2020-06-13 11:23:33"
   >
   <alias
    name="dushu"
@@ -1820,7 +1696,7 @@
    send_to="10"
    sequence="100"
   >
-  <send>ask yue about Ê§°Ü;/checkPrepare()</send>
+  <send>ask yue about Ê§°Ü</send>
   </alias>
   <alias
    match="hssb"
@@ -1828,7 +1704,7 @@
    send_to="10"
    sequence="100"
   >
-  <send>ask yue about Ê§°Ü</send>
+  <send>ask yue about Ê§°Ü;/checkPrepare()</send>
   </alias>
   <alias
    match="hsyls"
@@ -1949,7 +1825,7 @@
    regexp="y"
    sequence="100"
   >
-  <send>alias pfmpfm get fengyun sword;get taiji sword;unwield xiao;unwield taiji sword;wield fengyun sword;bei none;jifa hand lanhua-shou;jifa parry lanhua-shou;uweapon shape fengyun hand;bei hand;jiali max;perform leg.fengwu;perform hand.shuang;perform strike.pikong;perform sword.yuxiao;perform finger.huayu;jiali 1</send>
+  <send>alias pppp1 get fengyun sword;get taiji sword;unwield xiao;unwield taiji sword;wield fengyun sword;wield taiji sword;bei none;jifa cuff taizu-quan;bei cuff;jifa strike luoying-zhang;jifa sword jinshe-jianfa;jifa parry jinshe-jianfa;uweapon shape fengyun sword;jiali max;perform leg.fengwu;perform hand.shuang;perform strike.pikong;perform sword.kuangwu;perform finger.huayu;jiali 1 xu fu</send>
   </alias>
   <alias
    name="kjh"
@@ -2006,7 +1882,7 @@
    regexp="y"
    sequence="100"
   >
-  <send>alias mypfm perform strike.pikong observec</send>
+  <send>alias mypfm perform strike.pikong tumj</send>
   </alias>
   <alias
    match="opendoor"
@@ -2393,7 +2269,7 @@
    regexp="y"
    sequence="100"
   >
-  <send>alias sxlian bei none;unwield taiji sword;unwield wuji xiao;uweapon shape fengyun sword;unwield fengyun sword;jifa sword jinshe-jianfa;wield taiji sword;lian sword 30;unwield taiji sword;yun jingli;jifa strike jinshe-zhangfa;lian strike 10;yun jingli;jifa cuff taizu-quan;lian cuff 10;yun jingli;jifa hand lanhua-shou;lian hand 10;yun jingli;bei cuff;hp;unset »ýÐî</send>
+  <send>alias sxlian bei none;unwield taiji sword;unwield wuji xiao;uweapon shape fengyun sword;unwield fengyun sword;jifa sword jinshe-jianfa;wield taiji sword;lian sword 30;unwield taiji sword;yun jingli;jifa finger tanzhi-shentong;lian finger 10;yun jingli;jifa sword yuxiao-jian;wield wuji xiao;lian sword 10;unwield wuji xiao;yun jingli;jifa dodge suibo-zhuliu;lian dodge 10;yun jingli;jifa strike jinshe-zhangfa;lian strike 10;yun jingli;jifa cuff taizu-quan;lian cuff 10;yun jingli;jifa hand lanhua-shou;lian hand 10;yun jingli;bei cuff;hp;unset »ýÐî</send>
   </alias>
   <alias
    match="sxsb"
@@ -2622,11 +2498,8 @@
 <timers
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-12 07:08:37"
+   date_saved="2020-06-13 11:23:33"
   >
-  <timer name="walkWait" script="walk_goon" enabled="y" second="0.10" offset_second="0.00" active_closed="y" >
-
-  </timer>
   <timer name="idle" script="idle_set" enabled="y" second="30.00" offset_second="0.00" active_closed="y" >
 
   </timer>
@@ -2636,9 +2509,6 @@
   <timer name="halt" script="halt_timer_set" second="0.40" offset_second="0.00" active_closed="y" >
 
   </timer>
-  <timer name="bei" script="bei_timer_set" second="0.40" offset_second="0.00" active_closed="y" >
-
-  </timer>
 </timers>
 
 <!-- macros -->
@@ -2646,7 +2516,7 @@
 <macros
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-12 07:08:37"
+   date_saved="2020-06-13 11:23:33"
   >
 
   <macro name="up" type="send_now" >
@@ -2740,7 +2610,7 @@
 <variables
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-12 07:08:37"
+   date_saved="2020-06-13 11:23:33"
   >
   <variable name="autoGetJinHe">1</variable>
   <variable name="caishen_location">»ªÉ½´å²ËµØ</variable>
@@ -2750,7 +2620,7 @@
   <variable name="dmlNewDecreaseLvl">20</variable>
   <variable name="dmlNewIncreaseLvl">50</variable>
   <variable name="dmlPkFlag">notReady</variable>
-  <variable name="dml_cur_date">20200611</variable>
+  <variable name="dml_cur_date">20200613</variable>
   <variable name="do_lost_again">0</variable>
   <variable name="drugprepare">²õÍÉ½ð´¯Ò©|»ÆÜÎÄÚÏ¢µ¤|Å£Æ¤¾Æ´ü|»ðÕÛ</variable>
   <variable name="dsjl">\D*ºüÒÉµØ¿´×ÅÄã£º¡¸ÕâÐÅÔõÃ´Âäµ½ÄãµÄÊÖÉÏ£¿¡¹|\D*ÉÏÏÂ´òÁ¿ÁËÄãÁ½ÑÛ£º¡¸Äãµ±ÕæÃ»ÓÐÍµ²ðÀ´¿´¹ý£¿\D*¿ÉÊÇÓÐÒþË½È¨µÄ¡£¡¹|\D*×ÔÑÔ×ÔÓïµÀ£º¡°Õâ¸öÄêÍ·¶ù°¡£¬ÊÀÉÏÊ²Ã´»µÈË¶¼ÓÐ£¬¼Ù°çÁËºÍÉÐµÀÊ¿£¬±ãÏëÀ´»¯ÔµÆ­ÈË¡£\D*ÎÒÊ²Ã´Ã»¼û¹ý£¬²Å²»ÉÏÕâ¸öµ±ÄØ¡£¡±|\D*Ô½ÏëÔ½ÉúÆø£¬±©´òÁËÄãÒ»¶Ù£¬´òµÃÄã±éÌåÁÛÉË¡£|Äã±»\D*´ò³ÉÖØÉË£¬¾­ÑéÏÂ½µÁË\D*µã¡£|ÄãÒò±»ÈË±©×á¶ø³öÃû£¬½­ºþÉùÍûÔö¼ÓÁË\D*µã¡£|Äã¸Ð¾õ×Ô¼ºÊÜ¾¡ÁËÎ¯Çü£¬ÎØÎØµØ¿ÞÁËÆðÀ´¡£|¡¾Ò¥ÑÔ¡¿Ä³ÈË£º¾ÝËµ\D*±»\D*´òÉµÁË!|Äã»ñµÃÁË¶þµã½­ºþÉùÍû¡£|×òÌìÍê³ÉÊ§ÂäÐÅ¼ãÈÎÎñ£º\S*´Î£¬½ñÌìÍê³ÉÊ§ÂäÐÅ¼ãÈÎÎñ£º\S*/\S*´Î¡£|Äã½ñÌìÒÑ¾­Ê¹ÓÃ\S*´ÎÐÅÊ¹Ö®Ö¤£¬Äã±¾ÖÜ¹²Ê¹ÓÃ\S*´ÎÐÅÊ¹Ö®Ö¤¡£</variable>
@@ -2767,8 +2637,8 @@
   <variable name="id">pumkmai</variable>
   <variable name="jin_chai">1</variable>
   <variable name="job_finish_ll">0</variable>
-  <variable name="job_hqg_date">202006110652</variable>
-  <variable name="job_hqg_finish_date">20200611</variable>
+  <variable name="job_hqg_date">202006130648</variable>
+  <variable name="job_hqg_finish_date">20200613</variable>
   <variable name="job_hqg_max_times">100</variable>
   <variable name="job_hqg_times">0</variable>
   <variable name="job_hqg_toggle">1</variable>
@@ -2853,7 +2723,7 @@
   <variable name="use_wxb_sq">0</variable>
   <variable name="weaponfirst">Äý¾§Ì«¼«½£</variable>
   <variable name="weaponprepare">ÁéÆ÷¡¤Ð¡ÖÜÌì·çÔÆ½£_Äý¾§Ì«¼«½£_ÓñË®ÎÞ¼«óï_Ê¯×Ó</variable>
-  <variable name="worship_done">0</variable>
+  <variable name="worship_done">1</variable>
   <variable name="worship_flag">0</variable>
   <variable name="xuexiskill">force|bihai-chaosheng|qimen-bagua|dodge|sword|hand|lanhua-shou|suibo-zhuliu|yuxiao-jian|strike|leg|finger|luoying-zhang|tanzhi-shentong|xuanfeng-tui|parry|throwing</variable>
   <variable name="xuezhu_status">2</variable>
@@ -2888,7 +2758,7 @@
 <colours
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-12 07:08:37"
+   date_saved="2020-06-13 11:23:33"
   >
 
 <ansi>
@@ -2945,7 +2815,7 @@
 <keypad
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-12 07:08:37"
+   date_saved="2020-06-13 11:23:33"
   >
 
   <key name="0" >
@@ -3059,7 +2929,7 @@
 <printing
    muclient_version="4.84"
    world_file_version="15"
-   date_saved="2020-06-12 07:08:37"
+   date_saved="2020-06-13 11:23:33"
   >
 
 <ansi>

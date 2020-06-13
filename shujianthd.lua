@@ -2813,6 +2813,7 @@ function checkJob()
     print('checkJob........')
     
 	local use_wxb_sq = tonumber(GetVariable('use_wxb_sq'))
+	local worship_done = tonumber(GetVariable('worship_done'))
 	
     wait.make(function()
 	    locate(coroutine.running())
@@ -2821,11 +2822,8 @@ function checkJob()
 		    --明悟清零
 			SetVariable('worship_done','0')
 	        return reboot_prepare()
-		elseif locl.weekday=='三' and locl.hour==11 and locl.min>=15 and locl.min<=30 then 
-		    local worship_done = tonumber(GetVariable('worship_done'))
-			if worship_done == 0 then
-                return auto_worship_laoren()     			
-			end
+		elseif locl.weekday=='三' and locl.hour==11 and locl.min>=20 and locl.min<=30 and worship_done==0 then 
+            return auto_worship_laoren()     			
 	    elseif use_wxb_sq == 1 then
 		     checkBags(coroutine.running())
 		     coroutine.yield()
