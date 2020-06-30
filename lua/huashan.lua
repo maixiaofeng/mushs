@@ -682,8 +682,18 @@ function huashan_getget()
         return check_busy(huashan_cut,0.5)
 	else
 	    --exe('get corpse '..corpse_idx)
-		exe('get corpse')
-        return    
+		---exe('get corpse')
+				
+		wait.make(function()
+	      while true do
+		    exe('get corpse')
+			exe('hug '..score.id)
+			local l, w = wait.regexp('^(> )*你向梦中的情人抱去，结果落了个空',1)
+			if l~=nil then 
+			    return 				
+			end
+		  end
+	    end)
     end
 
 end

@@ -5167,8 +5167,14 @@ function currentCwxTotalCount(n,l,w)
             wait_busy()
 	        return checkPrepareOver()			
 		end)
+	else
+	    wait.make(function()
+		    wait_busy()
+			exe('drop sheng zi')
+            wait_busy()
+	        return checkPrepareOver()			
+		end)
 	end
-	
 end
 
 
